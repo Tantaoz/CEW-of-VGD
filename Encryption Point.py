@@ -2,7 +2,7 @@ import os
 import math
 from osgeo import ogr
 import sys
-import time
+
 
 '''读入矢量数据（shp）'''
 
@@ -160,7 +160,7 @@ if __name__ == '__main__':
     a, b, t0 = 3.14, 1.25, 50  # 参数，t0为迭代次数
     X_sumen, Y_sumen = Henon(X_sum, Y_sum, x0, y0, a, b, t0)  # 点置乱
     RXLst, RYLst = En_point(X_sumen, Y_sumen, XLst, YLst)  # 点替换
-    end = time.perf_counter()
+
     fn_w = r"E:\Map\En_polygon22.shp"
     write_encrytpion_shp(fn_r, fn_w, RXLst, RYLst)  # Write out the encrypted vector data
 
